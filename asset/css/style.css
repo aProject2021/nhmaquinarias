@@ -438,6 +438,9 @@ h2 {
     .service-content {
         width: 100%;
     }
+    .service.reverse {
+        flex-direction: column;
+    }
 }
 
 /*=======END SECTORES DESCRIPCION===========*/
