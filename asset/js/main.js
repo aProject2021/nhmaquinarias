@@ -26,4 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
             track.style.transform = `translateX(-${scrollAmount}px)`;
         }
     });
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const dropdown = document.querySelector(".dropdown");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    dropdown.addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
 });

@@ -572,6 +572,7 @@ h2 {
     align-items: center;
     margin-right: 50%;
     gap: 1rem;
+    margin-top: 6rem;
 }
 
 .hero::before {
@@ -692,7 +693,14 @@ h2 {
     opacity: 1;
     visibility: visible;
 }
-
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
 @media (max-width: 1024px) {
     .hero-contenedor {
         margin-right: 50%;
@@ -704,6 +712,40 @@ h2 {
 @media (max-width: 768px) {
     .hero-contenedor {
         margin-right: 0px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background: transparent;
+        text-align: center;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    .navbar nav ul{
+        display: none;
     }
 }
 
