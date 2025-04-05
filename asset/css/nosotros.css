@@ -183,6 +183,7 @@ section h2 {
     display: none;
     flex-direction: column;
     padding: 20px;
+    margin-top: 2rem;
   }
 
   .navbar-menu.active {
