@@ -9,22 +9,50 @@
   <meta name="keywords" content="maquinaria pesada, Perú, innovación, construcción, minería" />
   <meta name="author" content="NH Maquinarias Perú" />
   <title>Nosotros | NH Maquinarias Perú</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="asset/css/nosotros.css" />
   <link rel="stylesheet" href="asset/css/footer.css" />
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">NH</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sectores">Sectores</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#cotiza" class="btn-cta">Cotiza aquí</a></li>
+ <!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-logo">
+      <img src="asset/img/logo/nhmaquinaria.png" alt="Logo NH" />
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggle" id="menu-toggle">
+      &#9776;
+    </button>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar-menu" id="navbar-menu">
+      <ul>
+        <li><a href="#">INICIO</a></li>
+        <li class="has-submenu">
+          <a href="#" onclick="toggleSubmenu(event)">SECTORES</a>
+          <ul class="submenu">
+            <li><a href="#">Minería</a></li>
+            <li><a href="#">Construcción</a></li>
+            <li><a href="#">Aeronáutica</a></li>
+            <li><a href="#">Pesca</a></li>
+            <li><a href="#">Agricultura</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BLOG</a></li>
+        <li>
+          <a href="#" class="btn-cotiza">Cotiza aquí</a>
+        </li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <main>
     <section class="hero-section">
@@ -34,8 +62,8 @@
         <p>Comprometidos con la excelencia para impulsar el crecimiento de las industrias en el Perú.</p>
       </div>
     </section>
-    
-    
+
+
     <section id="quienes-somos" class="container">
       <div class="content">
         <h2>Quiénes Somos</h2>
@@ -183,7 +211,7 @@
         <!-- Más logos aquí -->
       </div>
     </section>
-    
+
 
     <section id="equipo" class="container">
       <h2>Nuestro equipo</h2>
@@ -247,7 +275,7 @@
       <p>NH MAQUINARIAS PERU SAC</p>
     </div>
   </footer>
-
+  <script src="asset/js/nosotros.js"></script>
 
 </body>
 

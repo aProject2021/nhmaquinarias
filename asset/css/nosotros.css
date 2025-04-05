@@ -35,41 +35,157 @@ section h2 {
   margin-bottom: 2rem;
 }
 
-header {
-  background-color: #0c1a35;
-  color: #fff;
+/*==========NAVBAR=====*/
+/* NAVBAR GENERAL */
+.navbar {
+  background-color: #04162e;
+  color: white;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 999;
+  width: 100%;
 }
 
-.navbar {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.nav-links {
+/* LOGO */
+.navbar-logo {
   display: flex;
+  align-items: center;
+}
+.navbar-logo img {
+  height: 50px;
+  display: block;
+}
+
+/* Elimina estilos por defecto del link */
+.navbar-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BOTÓN HAMBURGUESA */
+.navbar-toggle {
+  font-size: 26px;
+  background: none;
+  color: white;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+/* MENÚ DESKTOP */
+.navbar-menu {
+  display: flex;
+}
+.navbar-menu ul {
   list-style: none;
-  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
-
-.nav-links a {
+.navbar-menu ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar-menu ul li a:hover {
+  color: #4faaff;
 }
 
-.btn-cta {
-  background-color: #4259a5;
-  padding: 0.5rem 1rem;
+/* BOTÓN COTIZA */
+.btn-cotiza {
+  padding: 8px 16px;
+  border: 1px solid white;
   border-radius: 8px;
-  color: white;
-  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* SUBMENÚ */
+.has-submenu {
+  position: relative;
+}
+.submenu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #04162e;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+/* MOSTRAR SOLO SI LA CLASE 'open' ESTÁ ACTIVA */
+.has-submenu.open .submenu {
+  display: flex;
+}
+
+/* QUITAR hover si ya lo tenías antes */
+.has-submenu:hover .submenu {
+  display: none;
+}
+.has-submenu.open > .submenu {
+  display: flex !important;
+}
+.submenu li {
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+.submenu li a {
+  display: block;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #04162e;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .has-submenu:hover .submenu {
+    display: none;
+  }
+
+  .has-submenu.open .submenu {
+    display: flex;
+    position: static;
+    padding-left: 15px;
+  }
+}
+
+
+/*=======MAIN SECTION==============*/
 
 .hero-section {
   position: relative;
