@@ -40,7 +40,7 @@ section h2 {
 .navbar {
   background-color: #04162e;
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 0.8rem 2rem;
   position: relative;
   z-index: 999;
   width: 100%;
@@ -60,7 +60,7 @@ section h2 {
   align-items: center;
 }
 .navbar-logo img {
-  height: 50px;
+  height: 70px;
   display: block;
 }
 
@@ -101,12 +101,31 @@ section h2 {
 }
 
 /* BOTÓN COTIZA */
-.btn-cotiza {
-  padding: 8px 16px;
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #617084; /* azul-grisáceo */
+  color: white;
+  padding: 10px 20px;
   border: 1px solid white;
-  border-radius: 8px;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #4d5c6f;
+}
+
+.btn-whatsapp .icon {
+  flex-shrink: 0;
+}
+.btn-whatsapp img {
+  width: 24px;
+  height: 24px;
 }
 
 /* SUBMENÚ */
@@ -119,7 +138,7 @@ section h2 {
   top: 100%;
   left: 0;
   background-color: #04162e;
-  padding: 10px 0;
+  padding: 1.5rem;
   min-width: 180px;
   z-index: 1000;
   flex-direction: column;
@@ -138,6 +157,7 @@ section h2 {
   display: flex !important;
 }
 .submenu li {
+  border-bottom: 1px solid white;
   padding: 8px 20px;
   white-space: nowrap;
 }
@@ -145,7 +165,9 @@ section h2 {
   display: block;
   color: white;
 }
-
+.submenu li:last-child {
+  border-bottom: none;
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar-toggle {
