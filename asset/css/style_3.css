@@ -25,7 +25,9 @@ body {
     width: 100%;
     font-family: 'poppins-regular';
 }
-
+section h2{
+    margin-bottom: 2rem;
+}
 /*===========FOOTER===============*/
 
 footer {
@@ -39,7 +41,19 @@ h2 {
     color: #34425F;
     font-family: 'poppins-semibold';
 }
-
+.btn-secundary {
+    display: flex;
+    padding: 16px 40px;
+    background-color: #f4b400;
+    /* Color amarillo */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -220,6 +234,9 @@ h2 {
 
 /* Tarjetas */
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     flex: 0 0 280px;
     /* Ancho de cada card */
     background: white;
@@ -294,6 +311,9 @@ h2 {
     }
 
     .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         flex: 0 0 250px;
     }
 
@@ -351,100 +371,107 @@ h2 {
 }
 
 /*=======END POR QUE ELEGIRNO===========*/
-/*=======SECTORES DESCRIPCION===========*/
-/* Centrar y limitar el ancho del contenido */
-.container {
-    max-width: 1100px;
-    /* Ajusta según necesites */
+/*==========UNIDADES DE NEGOCIO=========*/
+.especialidades {
+    max-width: 1200px;
     margin: 0 auto;
-    /* Centra el contenido */
-    padding: 20px;
-}
-
-.services {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    /* Espaciado entre los bloques */
-}
-
-/* Contenedor de cada servicio */
-.service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 5rem;
-}
-
-/* Imágenes ajustadas */
-.service img {
-    width: 45%;
-    /* Imagen ocupa el 45% del ancho */
-    height: auto;
-    max-height: 300px;
-    /* Altura máxima para que no sean demasiado grandes */
-    object-fit: cover;
-    /* Evita distorsión */
-    border-radius: 10px;
-}
-
-/* Contenido del servicio */
-.service-content {
-    width: 50%;
-    /* Ocupará el 50% restante */
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem 1rem;
     text-align: center;
-    justify-content: center;
-}
-
-/* Botón estilizado */
-.btn-secundary {
+  }
+  
+  .contenido {
     display: flex;
-    padding: 16px 40px;
-    background-color: #f4b400;
-    /* Color amarillo */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    margin: 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
-    gap: 0.5rem;
-}
-
-/* Alternar el orden en servicios impares */
-.service.reverse {
-    flex-direction: row-reverse;
-}
-
-/* 📌 RESPONSIVE DESIGN para móviles */
-@media (max-width: 768px) {
-    .service {
-        flex-direction: column;
-        text-align: center;
+    justify-content: center;
+  }
+  
+  .lista-especialidades {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icono {
+    width: 70px;
+    height: 70px;
+    background-color: #d6a719;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .icono img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  
+  .imagen-collage {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  
+  .imagen-collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* ✅ Responsive para tablets y móviles */
+  @media (max-width: 768px) {
+    .contenido {
+      flex-direction: column;
     }
-
-    .service img {
-        width: 100%;
-        /* Ocupará todo el ancho */
-        max-height: 250px;
-        /* Ajusta la altura */
+  
+    .imagen-collage {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
     }
-
-    .service-content {
-        width: 100%;
+  
+    .imagen-collage img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
-
-    .service.reverse {
-        flex-direction: column;
+  }
+  
+  @media (max-width: 480px) {
+    .icono {
+      width: 40px;
+      height: 40px;
+      margin-right: 0.75rem;
     }
-}
-
-/*=======END SECTORES DESCRIPCION===========*/
+  
+    .icono img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .item h3 {
+      font-size: 0.95rem;
+    }
+  
+    .imagen-collage {
+      max-height: 300px;
+    }
+  }
+  
+/*==========END UNIDADES DE NEGOCIO==========*/
 /*======SECTORES ITEMS================*/
 /* CONTENEDOR GENERAL */
 .sectores {

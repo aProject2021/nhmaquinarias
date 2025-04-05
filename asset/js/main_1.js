@@ -2,12 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-track");
     const leftBtn = document.querySelector(".left-btn");
     const rightBtn = document.querySelector(".right-btn");
-
+    let mqLarge = window.matchMedia('(max-width: 768px)');
+    let _offsetWidth = 20
     let scrollAmount = 0;
-    let cardWidth = document.querySelector(".card").offsetWidth + 20; // Ancho dinámico
+    if (mqLarge.matches) {
+        _offsetWidth = 10
+    } else {
+        _offsetWidth = 20
+    }
+    let cardWidth = document.querySelector(".card").offsetWidth + _offsetWidth; // Ancho dinámico
 
     function updateCardWidth() {
-        cardWidth = document.querySelector(".card").offsetWidth + 20;
+
+        if (mqLarge.matches) {
+            _offsetWidth = 10
+        } else {
+            _offsetWidth = 20
+        }
+        cardWidth = document.querySelector(".card").offsetWidth + _offsetWidth;
     }
 
     // Ajustar tamaño de desplazamiento en resize
